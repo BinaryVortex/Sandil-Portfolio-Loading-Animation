@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Set background color to black */
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes the spinner a circle */
+  background-color: aqua; /* Background color of the spinner */
+  display: grid;
+  place-items: center; /* Centers the inner div inside the spinner */
+  animation: zoomin 1.5s infinite alternate-reverse; /* Animates the zoom effect */
+  position: relative;
+}
+
+.inner {
+  background-color: #212121; /* Inner circle color */
+  width: 80%;
+  height: 80%;
+  border-radius: 50%; /* Makes the inner div a circle */
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(1); /* Initial scale */
+    box-shadow: 0 0 100px 20px rgb(16, 71, 71); /* Initial shadow */
+  }
+
+  100% {
+    transform: scale(1.5); /* Scaled-up effect */
+    box-shadow: 0 0 100px 20px #000; /* Darker shadow */
+  }
+}
